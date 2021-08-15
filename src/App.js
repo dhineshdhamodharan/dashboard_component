@@ -30,14 +30,16 @@ function App() {
       <div class="container-fluid">
           <Switch>
             <Route path="/" component={Dashboard} exact={true}/>
-            <ProductProvider>
-            <Route path="/products" component={Products} exact={true}/>
-            <Route path="/create-product" component={createproduct} exact={true}/>
-             <UserProvider>
+                 <UserProvider>
             <Route path="/users" component={Users} exact={true}/>
             <Route path="/create-user" component={Createuser} exact={true}/>
             <Route path="/users/edit/:id" component={Edituser} exact={true}/>
             </UserProvider>
+
+            <ProductProvider>
+            <Route path="/products" component={Products} exact={true}/>
+            <Route path="/create-product" component={createproduct} exact={true}/>
+
             <Route path="/products/edit/:id" component={Editproduct} exact={true}/>
             </ProductProvider>
             
