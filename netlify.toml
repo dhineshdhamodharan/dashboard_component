@@ -1,0 +1,4 @@
+[[redirects]]
+from="/*"
+to="/"
+success=200
