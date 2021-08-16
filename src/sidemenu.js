@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react";
 function Sidemenu(){
     return(
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
