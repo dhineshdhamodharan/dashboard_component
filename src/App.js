@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Sidemenu from "./sidemenu"
 import Topmenu from "./topmenu";
@@ -14,8 +13,7 @@ import { ProductProvider } from './productcontext';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 
@@ -30,17 +28,16 @@ function App() {
       <div class="container-fluid">
           <Switch>
             <Route path="/" component={Dashboard} exact={true}/>
-            <ProductProvider>
-            <Route path="/products" component={Products} exact={true}/>
-            <Route path="/create-product" component={createproduct} exact={true}/>
             <UserProvider>
             <Route path="/users" component={Users} exact={true}/>
             <Route path="/create-user" component={Createuser} exact={true}/>
             <Route path="/users/edit/:id" component={Edituser} exact={true}/>
-            </UserProvider>
+            <ProductProvider>
+            <Route path="/products" component={Products} exact={true}/>
+            <Route path="/create-product" component={createproduct} exact={true}/>            
             <Route path="/products/edit/:id" component={Editproduct} exact={true}/>
             </ProductProvider>
-            
+            </UserProvider>
           </Switch>
       </div>
       </div>
