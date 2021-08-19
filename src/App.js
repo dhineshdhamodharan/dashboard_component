@@ -11,7 +11,7 @@ import Editproduct from './editproduct';
 import { UserProvider } from './usercontext';
 import { ProductProvider } from './productcontext';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route
 } from "react-router-dom";
@@ -19,7 +19,7 @@ import {
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
     <div id="wrapper">
     <Sidemenu></Sidemenu>
     <div id="content-wrapper" class="d-flex flex-column">
@@ -43,7 +43,7 @@ function App() {
       </div>
     </div>
     </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

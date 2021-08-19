@@ -1,15 +1,12 @@
-import React from 'react'
-import { useState } from 'react'
-import { useContext } from 'react';
+import React, { useContext, useState } from "react";
 import { useHistory } from 'react-router-dom';
-import ProductContext from "./productcontext"
+import ProductContext from "./productcontext";
 
-function Createproduct(props) {
+function Createproduct() {
     const [productName,setproductName]=useState("");
     const [price,setPrice]=useState("");
     const [expiryDate,setexpiryDate]=useState("");
     const [manufacturingDate,setmanufacturingDate]=useState("");
-
     const productContext = useContext(ProductContext);
     const history=useHistory()
 
@@ -22,7 +19,6 @@ function Createproduct(props) {
       setPrice("");
       setexpiryDate("");
       setmanufacturingDate("");
-    
 
       let productData={productName,price,expiryDate,manufacturingDate};
       productContext.setProductList([...productContext.productList,productData])

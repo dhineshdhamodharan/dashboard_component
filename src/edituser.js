@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import UserContext from "./usercontext";
 
 function Edituser(props) {
@@ -26,7 +24,7 @@ function Edituser(props) {
         setStartdate(userData.startdate);
         setSalary(userData.salary);
 
-    }, [])
+    }, [props.match.params.id, userContext])
 
     let handleSubmit=(e)=>
     {

@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import ProductContext from "./productcontext";
-function Users(){
+function Products(){
     const productContext = useContext(ProductContext)
 
     let handleDelete=(index)=>{
@@ -36,6 +36,7 @@ function Users(){
                                             <th>Price</th>
                                             <th>Expiry Date</th>
                                             <th>Manufacturing date</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -45,6 +46,7 @@ function Users(){
                                             <th>Price</th>
                                             <th>Expiry Date</th>
                                             <th>Manufacturing date</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -71,4 +73,4 @@ function Users(){
                     </>
     )
 }
-export default Users;
+export default Products;

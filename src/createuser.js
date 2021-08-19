@@ -1,11 +1,8 @@
-import React from 'react'
-import { useState } from 'react'
-import { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useContext, useState } from "react";
+import { useHistory } from "react-router-dom";
 import UserContext from "./usercontext";
 
-function Createuser(props) {
-
+function Createuser() {
     const [userName,setuserName]=useState("");
     const [position,setPosition]=useState("");
     const [office,setOffice]=useState("");

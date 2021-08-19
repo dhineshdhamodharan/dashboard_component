@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import ProductContext from "./productcontext";
 
 function Editproduct(props) {
@@ -19,7 +17,7 @@ function Editproduct(props) {
         setPrice(productData.price);
         setexpiryDate(productData.expiryDate);
         setmanufacturingDate(productData.manufacturingDate);
-    }, [])
+    }, [props.match.params.id, productContext])
 
     let handleSubmit=(e)=>
     {
